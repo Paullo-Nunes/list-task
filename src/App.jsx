@@ -1,5 +1,7 @@
 function App() {
 
+  const list = ["Ir à academia", "Estudar React", "Fazer exercícios"]
+
   function inputMudou(event) {
     console.log(event.target.value)
   }
@@ -14,9 +16,7 @@ function App() {
       <button onClick={cliqueiNoBotao}>Adicionar</button>
 
       <ul>
-        <li>Ir à academia</li>
-        <li>Estudar React</li>
-        <li>Fazer exercícios</li>
+        {list.map((item) => <li>{item}</li>)}
       </ul>
     </>
   )
