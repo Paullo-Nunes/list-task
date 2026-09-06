@@ -1,6 +1,6 @@
 function App() {
 
-  const list = ["Ir à academia", "Estudar React", "Fazer exercícios"]
+  const list = [{ id: 123, task: "Ir à academia" }, { id: 234, task: "Estudar React" }, { id: 345, task: "Fazer exercícios" }]
 
   function inputMudou(event) {
     console.log(event.target.value)
@@ -16,10 +16,10 @@ function App() {
       <button onClick={cliqueiNoBotao}>Adicionar</button>
 
       <ul>
-        {list.map((item) => <li>{item}</li>)}
+        {list.map((item) => <li key={item.id}>{item.task}</li>)}
       </ul>
     </>
   )
 }
-
+  
 export default App
