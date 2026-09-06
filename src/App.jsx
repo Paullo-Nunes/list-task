@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from 'uuid';
+
 function App() {
 
-  const list = [{ id: 123, task: "Ir à academia" }, { id: 234, task: "Estudar React" }, { id: 345, task: "Fazer exercícios" }]
+  const list = [{ id: uuidv4(), task: "Ir à academia" }, { id: uuidv4(), task: "Estudar React" }, { id: uuidv4(), task: "Fazer exercícios" }]
 
   function inputMudou(event) {
     console.log(event.target.value)
